@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Libra Login Form Widget Tab Form,Login Forms,Sign up Forms,Registration Forms,News letter Forms,Elements"/>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src='js/responsivevoice.js'></script>
 <link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
@@ -21,11 +23,13 @@
 			<div class="asdf">
 
 			</div>
-			<form action="#" method="post">
-				<input type="text" name="name" placeholder="CIN NO" required=""/>
+			<form action="LaunchServlet" method="post" name="signup">
+				<input type="text" id="cin" name="cin" placeholder="CIN NO" required="" onfocus="javascript:invokeVoice();" onload="javascript:invokeVoice();"/>
 				<br>
 				<br>
-				<img src="img/mi.png">
+				<input id="submitForm" type="submit" src="img/mi.png" onclick="javascript: submitForm();">
+				<script type="text/javascript">
+				</script>
 			</form>
 		</div>
 
@@ -34,4 +38,21 @@
 	</div>
 
 </body>
+<script>
+function invokeVoice() {
+	if(responsiveVoice.voiceSupport()) {
+		console.log('voice supported');
+		responsiveVoice.speak("Please provide your customer Id");
+		}
+}
+$( document ).ready(function() {
+	  $("#cin").click();
+	  
+	});
+</script>
+	<script type="text/javascript">
+	function submitForm() {
+		document.forms["signup"].submit();
+	}
+	</script>
 </html>
