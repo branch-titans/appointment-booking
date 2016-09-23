@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="java-speech-api-1.13.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../java-speech-api/target/java-speech-api-1.13.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
