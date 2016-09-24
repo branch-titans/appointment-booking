@@ -10,9 +10,10 @@
 <!-- //for-mobile-apps -->
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
+<script src='js/responsivevoice.js'></script>
 <!-- //js -->
 <link href="css/style3.css" rel="stylesheet" type="text/css" media="all" />
-<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="main">
@@ -48,7 +49,7 @@
 						<li>
 							<div class="agile_main_grid_left_grid">
 								<div class="agile_main_grid_left2">
-									<img src="img/1.png" alt=" " />
+									<img src="img/1.png" alt=" " onclick="javascript: invokeVoice();" />
 									<h3>UID-63243521<a></a></h3>
 									<p></p>
 									<div class="agile_main_grid_left2_grid">
@@ -59,10 +60,10 @@
 										<div class="clear"> </div>
 									</div>
 									<div>
-											<img src="img/mic.png" alt=" " />
+											<img src="img/mic.png" alt=" " onclick="javascript: invokeVoice();" />
 									</div><br>
 									<div class="agile_main_grid_left2_grid_bottom">
-										<a>Successful</a>
+										<a onclick="javascript: invokeVoice();" >Successful</a>
 									</div>
 
 
@@ -92,4 +93,12 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+function invokeVoice() {
+	if(responsiveVoice.voiceSupport()) {
+		console.log('voice supported');
+		responsiveVoice.speak("Your appointment is booked on 15th Aug at 9 45 am in Guindy Branch");
+		}
+}
+</script>
 </html>
