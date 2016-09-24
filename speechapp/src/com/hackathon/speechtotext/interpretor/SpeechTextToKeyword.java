@@ -15,12 +15,12 @@ import java.util.StringTokenizer;
  */
 public class SpeechTextToKeyword {
 
-    public static final String rawAppointmentString = "book an appointment on Sunday at 10 p.m. in Chennai";
+//    public static final String rawAppointmentString = "book an appointment on Sunday at 10 p.m. in Chennai";
     final List<String> keywords = new ArrayList<>();
     public Keyword collect(){
 
         final SpeechToText speechToText = SpeechToText.getInstance();
-        //final String rawAppointmentString = speechToText.getRawAppointmentRequest();
+        final String rawAppointmentString = speechToText.getRawAppointmentRequest();
         StringTokenizer stringTokenizer = new StringTokenizer(rawAppointmentString," ");
         while(stringTokenizer.hasMoreElements()){
             keywords.add((String) stringTokenizer.nextElement());

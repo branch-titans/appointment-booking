@@ -28,8 +28,15 @@ public class AppGSpeechResponseListener implements GSpeechResponseListener {
 	}
 
 	public synchronized boolean isRecordComplete(){
+//		boolean recordComplete = this.recordComplete;
+//System.out.println("recordComplete 1 "+recordComplete);
+//		//reset the flag in the listener
+//		this.recordComplete = false;
+//System.out.println("recordComplete 2 "+recordComplete);
+
 		return recordComplete;
 	}
+
 	public String getRawText() {
 
 		return this.rawText;
